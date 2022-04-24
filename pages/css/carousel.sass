@@ -1,0 +1,36 @@
+@charset "UTF-8"
+
+.slider
+  display: flex
+  justify-content: space-evenly
+  height: auto
+
+  img
+        width: 100%
+        height: auto
+        object-fit: cover
+        scroll-snap-align: start
+        margin: 0px
+        
+        &::-webkit-scrollbar
+            display: none
+
+
+  @media screen and(max-width: 480px)
+        img
+            width: 100%
+            height: auto
+            object-fit: contain
+            scroll-snap-align: start
+            margin: 0px
+
+        &::-webkit-scrollbar
+            display: none
+
+.btns
+  display: flex
+  justify-content: center
+  padding: 8px
+
+  button
+    margin: 0px 4px

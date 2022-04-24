@@ -2,7 +2,7 @@ body {
   font-family: 'M PLUS Rounded 1c';
   color: #333;
   background-image: url(../images/bgLP.jpg);
-  background-repeat: repeat-y;
+  background-repeat: repeat;
   background-size: contain;
 }
 
