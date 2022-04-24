@@ -12,10 +12,6 @@ export default ()=>{
     return(
 <>
 <IndexHead>
-{/* <Script
-    src="/pages/scripts/accordion.js"
-    strategy="afterInteractive"
-    /> */}
 </IndexHead>
 
 
