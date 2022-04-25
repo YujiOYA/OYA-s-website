@@ -3,7 +3,7 @@ import * as React from 'react';
 const IndexHead = ()=>{
     return(
     <Head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes" />
         <meta name="google-site-verification" content="KTSMI-8S62r4HmDSZRYqGwkozOyNOrCX4debPWo0dIQ" />
         

@@ -1,5 +1,4 @@
-// JavaScript Document
-'use strict'
+export function Pressed(){
 if (process.browser) {
 const outer = document.getElementsByClassName('repeat-button');
 const inner = document.getElementsByClassName('inner');
@@ -30,4 +29,5 @@ for (let i = 0; i < inner.length; i++) {
     console.log('ここです。');
 }
 */
+}
 }

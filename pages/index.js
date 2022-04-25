@@ -1,14 +1,22 @@
 import next from "next"
 import IndexHead from "./components/Head"
-import React from "react"
+import React, { useState } from "react"
 import Image from "next/image"
 import Car from "./components/slick"
 import Script from "next/script"
-import "/pages/scripts/accordion.js"
-import "/pages/scripts/pressed.js"
+
 
 
 export default ()=>{
+
+  const [values1, setActive1] = useState(false);
+  const [values2, setActive2] = useState(false);
+  const [values3, setActive3] = useState(false);
+  const [values4, setActive4] = useState(false);
+  const onoff1 = ()=> setActive1(!values1)
+  const onoff2 = ()=> setActive2(!values2)
+  const onoff3 = ()=> setActive3(!values3)
+  const onoff4 = ()=> setActive4(!values4)
     return(
 <>
 <IndexHead>
@@ -126,42 +134,42 @@ export default ()=>{
       <p className="sub_title">〜よくあるご質問〜</p>
       <p style={{textAlign: 'center'}}>以下の質問をクリックまたはタップすると回答が現れます</p>
         <div className="accordion">
-          <div className="menu js-menu">
+          <div className="menu js-menu" onClick={onoff1}>
             <p className="qa_q">Q.</p>
             <p className="qa_b">年齢は?</p>
           </div>
-          <div className="contents">
+          <div className={`contents ${values1? "is-open":"" }`}>
             <p className="qa_a">A.</p>
             <p className="qa_b">
               35歳です
             </p>
           </div>
 
-          <div className="menu js-menu">
+          <div className="menu js-menu" onClick={onoff2}>
             <p className="qa_q">Q.</p>
             <p className="qa_b">家族構成は??</p>
           </div>
-          <div className="contents">
+          <div className={`contents ${values2? "is-open":"" }`}>
             <p className="qa_a">A.</p>
             <p className="qa_b">
               妻と子2人（長男5歳、次男0歳）
             </p>
           </div>
-          <div className="menu js-menu">
+          <div className="menu js-menu" onClick={onoff3}>
             <p className="qa_q">Q.</p>
             <p className="qa_b">希望する仕事は？</p>
           </div>
-          <div className="contents">
+          <div className={`contents ${values3? "is-open":"" }`}>
             <p className="qa_a">A.</p>
             <p className="qa_b">
               コードを書かせてください。
             </p>
           </div>
-          <div className="menu js-menu">
+          <div className="menu js-menu" onClick={onoff4}>
             <p className="qa_q">Q.</p>
             <p className="qa_b">普段使っているPCは？</p>
           </div>
-          <div className="contents">
+          <div className={`contents ${values4? "is-open":"" }`}>
             <p className="qa_a">A.</p>
             <p className="qa_b">
               Macです。
@@ -178,6 +186,5 @@ export default ()=>{
       </footer>
     </div>
 </div>
-
 </>
 )}
