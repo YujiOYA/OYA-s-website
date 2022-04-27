@@ -26,7 +26,7 @@ jobs:
      - name: Install dependencies
        run:  npm ci
 
-     # ビルドする
+     # ビルド
      - name: Build
        run: npm run build
 
