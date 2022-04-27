@@ -24,11 +24,11 @@ jobs:
 
      # パッケージをインストールする
      - name: Install dependencies
-       run: npm --frozen-lockfile
+       run:  npm ci
 
      # ビルドする
      - name: Build
-       run: npm build
+       run: npm run build
 
      # GitHub Pages にデプロイする
      - name: Deploy
