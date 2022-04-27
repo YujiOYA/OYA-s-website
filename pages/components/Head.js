@@ -13,7 +13,6 @@ const IndexHead = ()=>{
         <meta http-equiv="imagetoolbar" content="no" />
         
         <meta charset="utf-8" />
-        <link href="../common/css/import.css" rel="stylesheet" type="text/css" media="all" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       

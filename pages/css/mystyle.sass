@@ -153,7 +153,7 @@ body
       display: block
 
   .playbox
-    boder-radius: 30px
+    border-radius: 30px
     width: 100%
     background: #fff
   
@@ -314,13 +314,10 @@ body
   align-items: center
   padding: 10px
   height: 50px
-  
 
   .inner
     height: 50px
     border-radius: 25px
-    border-bottom: 5px solid #333
-    border-right: 2px solid #333
     margin-bottom: 0px
     margin-right: 0px
     padding: 5px
@@ -328,13 +325,19 @@ body
     color: #fff
     background-color:#ff7300
     font-weight: 600
-    transition: 0.35s ease
+    animation: 'repeatbutton' 1s ease 0s infinite alternate
+    border-bottom: 10px solid #333
+    border-right: 10px solid #333
+    transition: 1s
+    
+    &.ispressed
+      border-bottom: 5px solid #333
+      border-right: 2px solid #333
 
-  .inner.is-pressed
-    border-bottom: 0px solid #333
-    border-right: 0px solid #333
-    background: #d45f00
-    transition: 0.65s ease
+
+    
+
+
 
   .inner:hover
     opacity: 0.5

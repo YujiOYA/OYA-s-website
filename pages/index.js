@@ -1,10 +1,7 @@
 import next from "next"
 import IndexHead from "./components/Head"
-import React, { useState } from "react"
-import Image from "next/image"
+import React, { useEffect, useState } from "react"
 import Car from "./components/slick"
-import Script from "next/script"
-
 
 
 export default ()=>{
@@ -13,10 +10,21 @@ export default ()=>{
   const [values2, setActive2] = useState(false);
   const [values3, setActive3] = useState(false);
   const [values4, setActive4] = useState(false);
+  const [rb, setT]= useState(false);
+
   const onoff1 = ()=> setActive1(!values1)
   const onoff2 = ()=> setActive2(!values2)
   const onoff3 = ()=> setActive3(!values3)
   const onoff4 = ()=> setActive4(!values4)
+
+  let numOfPressed=0;
+  const setrb =useEffect(()=> {
+    setInterval(()=>{
+      setT(rb=>!rb)
+    }, 1500);
+    },[])
+
+    
     return(
 <>
 <IndexHead>
@@ -35,7 +43,6 @@ export default ()=>{
             <a href="tel:08051185151">
               <span className="">☎080-5118-5151</span>
             </a>
-              <br />
               <span className="smalltext">(携帯)</span>
               <br />
         </div>
@@ -97,7 +104,7 @@ export default ()=>{
         <div className="content">
           <div className="c_text">
             <div className="baloon-group">
-              <Image src="/images/face.001.png" width={100} height={100} />
+              <img src="/images/face.001.png" width={100} height={100} />
               <div className="balloon1-left">
                 <p>
                   彼は音楽関係の仕事を志し、かつての職場に至ったそうです。入社後8年くらい営業をしていました。関東、東北を担当していたので、名古屋と東日本をいったりきたりしていたようですが、今では広報を担当するようになって、名古屋にとどまっているようです。
@@ -110,17 +117,17 @@ export default ()=>{
                   彼は学生時代には野球場でビールの売り子をしていました。当時は地元球団がとても強く、お客さんもたくさんスタジアムに足を運び、よくビールが売れました。ビールを売るためのトークや注ぎ方によるアピールなども身につけ、学生にしては割のいい歩合給をいただいていました。
                 </p>
               </div>
-              <Image src="/images/face.002.png" width={100} height={100} />
+              <img src="/images/face.002.png" width={100} height={100} />
             </div>
             <div className="baloon-group">
-              <Image src="/images/face.003.png" width={100} height={100} />
+              <img src="/images/face.003.png" width={100} height={100} />
               <div className="balloon1-left3">
                 <p>
                   彼は広報活動のwebサイト修正から始まり、webプログラミングに関心を持っています。WEBアンケートやPHPでチラシPDFを作成するプログラムや、最近ではLaravelでBBSを作ったりしています。
                 </p>
                 <div className="repeat-button">
                   <a href = 'http://myappbbs.herokuapp.com'>
-                    <p className="inner">学習中のアプリはこちら</p>
+                    <p onLoad={setrb} className={`inner ${rb?"ispressed":""}`}>学習中のアプリはこちら</p>
                   </a>
                 </div>
               </div>
