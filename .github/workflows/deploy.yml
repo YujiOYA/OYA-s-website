@@ -13,7 +13,7 @@ jobs:
    steps:
      # main ブランチを取得する
      - name: Checkout
-       uses: actions/checkout@v2.3.4
+       uses: actions/checkout@v3
 
      # Node.js のセットアップをする
      - name: Setup Node
