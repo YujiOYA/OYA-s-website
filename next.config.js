@@ -1,4 +1,4 @@
 module.exports = {
-  basePath: process.env.GITHUB_ACTIONS ? "/repository_name" : "",
+  basePath: process.env.GITHUB_ACTIONS ? "/pf" : "",
   trailingSlash: true,
 };
