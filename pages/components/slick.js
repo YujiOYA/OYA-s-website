@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import getConfig from "next/config";
+import Image from "next/image";
 
 export function url(filename) {
   const publicRuntimeConfig = getConfig() 
