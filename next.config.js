@@ -1,4 +1,4 @@
-const urlPrefix = process.env.URL_PREFIX ? '/pr' : ''
+const urlPrefix = process.env.GITHUB_ACTIONS ? '/pr' : ''
 
 module.exports = {
   // ...
