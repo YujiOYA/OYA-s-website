@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import getConfig from "next/config";
 import Image from "next/image";
+import { url } from "../utils/config";
 
 export function url(filename) {
   const publicRuntimeConfig = getConfig() 
