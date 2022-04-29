@@ -24,10 +24,10 @@ return(
     <>   
     <div>
         <Slider {...settings}>
-            <img src="/images/car.001.jpeg" width={960} height={500}  alt="MyInfo" />
-            <img src="/images/car.002.jpeg" width={960} height={500}  alt="MyInfo" />
-            <img src="/images/car.003.jpeg" width={960} height={500}  alt="MyInfo" />
-            <img src="/images/car.004.jpeg" width={960} height={500}  alt="MyInfo" />
+            <Image src="/images/car.001.jpeg" width={960} height={500}  alt="MyInfo" />
+            <Image src="/images/car.002.jpeg" width={960} height={500}  alt="MyInfo" />
+            <Image src="/images/car.003.jpeg" width={960} height={500}  alt="MyInfo" />
+            <Image src="/images/car.004.jpeg" width={960} height={500}  alt="MyInfo" />
         </Slider>
 </div>
 </>
