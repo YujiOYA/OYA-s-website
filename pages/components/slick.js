@@ -6,12 +6,6 @@ import getConfig from "next/config";
 import Image from "next/image";
 import { url } from "../utils/config";
 
-export function url(filename) {
-  const publicRuntimeConfig = getConfig() 
-  return publicRuntimeConfig.urlPrefix + filename
-}
-
-
 const Car = ()=>{
     const settings = {
         dots: true,
@@ -26,10 +20,10 @@ return(
     <>   
     <div>
         <Slider {...settings}>
-            <Image src="/images/car.001.jpeg" width={960} height={500}  alt="MyInfo" />
-            <Image src="/images/car.002.jpeg" width={960} height={500}  alt="MyInfo" />
-            <Image src="/images/car.003.jpeg" width={960} height={500}  alt="MyInfo" />
-            <Image src="/images/car.004.jpeg" width={960} height={500}  alt="MyInfo" />
+            <Image src={url("/images/car.001.jpeg")} width={960} height={500}  alt="MyInfo" />
+            <Image src={url("/images/car.002.jpeg")} width={960} height={500}  alt="MyInfo" />
+            <Image src={url("/images/car.003.jpeg")} width={960} height={500}  alt="MyInfo" />
+            <Image src={url("/images/car.004.jpeg")} width={960} height={500}  alt="MyInfo" />
         </Slider>
 </div>
 </>
