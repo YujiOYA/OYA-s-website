@@ -18,10 +18,10 @@ return(
     <>   
     <div>
         <Slider {...settings}>
-            <img src={url("./images/car.001.jpeg")} width={960} height={500}  alt="MyInfo" />
-            <img src={url("./images/car.002.jpeg")} width={960} height={500}  alt="MyInfo" />
-            <img src={url("./images/car.003.jpeg")} width={960} height={500}  alt="MyInfo" />
-            <img src={url("./images/car.004.jpeg")} width={960} height={500}  alt="MyInfo" />
+            <img src={url("/images/car.001.jpeg")} width={960} height={500}  alt="MyInfo" />
+            <img src={url("/images/car.002.jpeg")} width={960} height={500}  alt="MyInfo" />
+            <img src={url("/images/car.003.jpeg")} width={960} height={500}  alt="MyInfo" />
+            <img src={url("/images/car.004.jpeg")} width={960} height={500}  alt="MyInfo" />
         </Slider>
 </div>
 </>
