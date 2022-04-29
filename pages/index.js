@@ -1,8 +1,7 @@
-import next from "next"
 import IndexHead from "./components/Head"
 import React, { useEffect, useState } from "react"
 import Car from "./components/slick"
-import { url } from "./utils/config"
+import { url } from "../utils/config"
 
 
 export default ()=>{

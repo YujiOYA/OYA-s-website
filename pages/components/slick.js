@@ -2,9 +2,8 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import getConfig from "next/config";
 import Image from "next/image";
-import { url } from "../utils/config";
+import { url } from "../../utils/config";
 
 const Car = ()=>{
     const settings = {

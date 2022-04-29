@@ -1,6 +1,6 @@
 {
-  "/components/Head": "pages/components/Head.html",
   "/_app": "pages/_app.js",
+  "/components/Head": "pages/components/Head.html",
   "/components/slick": "pages/components/slick.html",
   "/": "pages/index.html",
   "/_error": "pages/_error.js",
