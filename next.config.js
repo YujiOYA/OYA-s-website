@@ -1,5 +1,4 @@
-require('dotenv').config();
-
 module.exports = {
-  assetPrefix: process.env.GITHUB_PAGES ? '' : '',
+  basePath: process.env.GITHUB_ACTIONS ? "/pf" : "",
+  trailingSlash: true,
 };
