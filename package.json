@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YujiOYA/pf.io.git"
+    "url": "git+https://github.com/YujiOYA/pf.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/YujiOYA/pf.io/issues"
+    "url": "https://github.com/YujiOYA/pf/issues"
   },
-  "homepage": "https://github.com/YujiOYA/pf.io#readme",
+  "homepage": "https://github.com/YujiOYA/pf#readme",
   "dependencies": {
     "next": "^12.1.5",
     "react": "^18.0.0",
