@@ -9,8 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next -p 3001",
-    "build": "env NODE_ENV='production' next build",
-    "export": "next export",
+    "build": "env NODE_ENV='production' next build && next export",
     "start": "next start",
     "watch": "next watch"
   },

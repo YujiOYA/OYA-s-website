@@ -1,5 +1,9 @@
+const urlPrefix = process.env.URL_PREFIX ? '/' + process.env.URL_PREFIX : ''
+
 module.exports = {
-  // some configuration
-  assetPrefix: process.env.NODE_ENV === "production" ? "/pf" : ""
-  // another configuration
+  // ...
+  assetPrefix: urlPrefix,
+  basePath: urlPrefix,
+  trailingSlash: true,
+  // ...
 };
