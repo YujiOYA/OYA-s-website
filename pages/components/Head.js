@@ -10,9 +10,9 @@ const IndexHead = ()=>{
         <meta name="author" content="OYA" />
         <meta name="Description" content="OYAのポートフォリオ" />
         <meta name="Keywords" content="ポートフォリオ,転職活動,ジョブチェンジ" />
-        <meta http-equiv="imagetoolbar" content="no" />
+        <meta httpEquiv="imagetoolbar" content="no" />
         
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       
