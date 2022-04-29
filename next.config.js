@@ -1,4 +1,5 @@
 module.exports = {
-  basePath: process.env.GITHUB_ACTIONS ? "/pf" : "",
-  trailingSlash: true,
+  // some configuration
+  assetPrefix: process.env.NODE_ENV === "production" ? "/pf" : ""
+  // another configuration
 };
