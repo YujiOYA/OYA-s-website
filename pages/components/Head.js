@@ -14,13 +14,13 @@ const IndexHead = ()=>{
         
         <meta charSet="utf-8" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
       
         <link
           href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@800&family=Reggae+One&family=Sawarabi+Mincho&display=swap"
           rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link
           href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500;700;800;900&family=M+PLUS+Rounded+1c&display=swap"
           rel="stylesheet" />
