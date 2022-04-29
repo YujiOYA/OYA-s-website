@@ -1,8 +1,4 @@
-const urlPrefix = process.env.GITHUB_ACTIONS ? '/' + pf : '';
-
 module.exports = {
-  assetPrefix: urlPrefix,
-  basePath: urlPrefix,
+  basePath: process.env.GITHUB_ACTIONS ? "/pf" : "",
   trailingSlash: true,
-  publicRuntimeConfig: { urlPrefix },  // ★コレ
-}
+};
