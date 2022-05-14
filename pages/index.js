@@ -86,14 +86,12 @@ export default ()=>{
     </div>
     
     <div id='p-1' className="content_group">
-      <p className="sub_title">ふろんとえんど？</p>
+      <p className="sub_title">言語</p>
       <div className="playbox">
         <div className="content">
           <div className="c_text">
-            html,css,JavaScriptのみではモダンな環境とはいえないので、<strong>React</strong>を学習中です。
+            html,css,JavaScript,PHP
           </div>
-          <div id="app"></div>
-          <div id="app"></div>
         </div>
       </div>
     </div>
@@ -127,7 +125,7 @@ export default ()=>{
                   彼は広報活動のwebサイト修正から始まり、webプログラミングに関心を持っています。WEBアンケートやPHPでチラシPDFを作成するプログラムや、最近ではLaravelでBBSを作ったりしています。
                 </p>
                 <div className="repeat-button">
-                  <a href = 'http://myappbbs.herokuapp.com'>
+                  <a href = 'https://oyasdiary.ga'>
                     <p onLoad={setrb} className={`inner ${rb?"ispressed":""}`}>学習中のアプリはこちら</p>
                   </a>
                 </div>
