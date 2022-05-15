@@ -90,7 +90,7 @@ export default ()=>{
       <div className="playbox">
         <div className="content">
           <div className="c_text">
-            html,css,JavaScript,PHP。
+            html,css,JavaScript,PHP
           </div>
         </div>
       </div>
