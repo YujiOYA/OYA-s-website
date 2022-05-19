@@ -9,15 +9,14 @@ section {
   margin: 0px auto;
   width: 90%;
   padding: 5px;
-  border:1px dotted #444444;
+  border: 1px dotted #444444;
   margin-bottom: 5px;
 }
 
 .accordion h4 {
-  display:flex;
+  display: flex;
   align-items: center;
 }
-
 
 .menu {
   display: flex;
@@ -34,38 +33,37 @@ section {
   margin: 5px auto;
 }
 
-.menu .qa_q{
+.menu .qa_q {
   margin-right: 15px;
   font-size: 2rem;
   font-weight: 700;
-  }
-.menu .qa_b{
+}
+.menu .qa_b {
   font-size: 1.2rem;
   flex: 3;
+}
+
+@media screen and(max-width:600px) {
+  .menu {
+    width: 80%;
   }
-
-@media screen and(max-width:600px){
-.menu{
-  width: 80%;
 }
-}
-
 
 .menu:hover,
 .menu:active,
 .menu.is-active {
   background-color: #cfcfcf;
-  color: #222222
+  color: #222222;
 }
 
-.hd_accs{
-  margin-right:10px;
+.hd_accs {
+  margin-right: 10px;
   width: auto;
   height: auto;
 }
 
 .hd_accs.is-open {
-  margin-right:10px;
+  margin-right: 10px;
   transform: rotateZ(90deg);
   transition-duration: 1.4s;
 }
@@ -87,11 +85,11 @@ section {
   margin-right: 15px;
   font-size: 2rem;
   font-weight: 700;
-  }
-.contents .qa_b{
+}
+.contents .qa_b {
   font-size: 1.2rem;
   flex: 3;
-  }
+}
 
 .contents.is-open {
   padding: 10px;
@@ -113,7 +111,7 @@ section {
 .menu2:active,
 .menu2.is-active2 {
   background-color: #cfcfcf;
-  color: #222222
+  color: #222222;
 }
 .contents2 {
   line-height: 0;
@@ -129,7 +127,7 @@ section {
   height: auto;
   opacity: 1;
 }
-.smalltext{
+.smalltext {
   font-size: 0.5rem;
   font-weight: 400;
 }

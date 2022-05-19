@@ -1,4 +1,4 @@
-import getConfig from 'next/config'
+import getConfig from "next/config";
 
 /**
  * public ディレクトリ以下に配置したファイルを参照するための URL を取得します。
@@ -18,7 +18,7 @@ import getConfig from 'next/config'
  */
 export function url(filename: string): string {
   const { publicRuntimeConfig } = getConfig() as {
-    publicRuntimeConfig: { urlPrefix: string }
-  }
-  return publicRuntimeConfig.urlPrefix + filename
+    publicRuntimeConfig: { urlPrefix: string };
+  };
+  return publicRuntimeConfig.urlPrefix + filename;
 }
