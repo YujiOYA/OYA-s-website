@@ -4,7 +4,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import Hamburger from "./humberger";
 
-export const Navi =()=>{
+export default const Navi =()=>{
     const route = useRouter();
     const path = route.asPath
     const [first, setfirst]= useState(false)
