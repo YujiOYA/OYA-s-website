@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const Button = (props)=>{
+export default const Button = (props)=>{
     return(
         <SButton type='button' onClick={props.onClick}>{props.children}</SButton>
     )
