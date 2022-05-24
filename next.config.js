@@ -6,4 +6,7 @@ module.exports = {
   basePath: urlPrefix,
   trailingSlash: true,
   publicRuntimeConfig: { urlPrefix },
+  experimental: {
+    optimizeFonts: true,
+  },
 };

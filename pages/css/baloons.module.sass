@@ -1,0 +1,75 @@
+.baloonGroup
+  display: flex
+  align-items: center
+  justify-content: space-around
+  width: 100%
+  height: auto
+
+  .balloon1Left
+    position: relative
+    display: inline-block
+    margin: 1.5em 0 1.5em 15px
+    padding: 7px 10px
+    min-width: 120px
+    max-width: 70%
+    color: #555
+    font-size: 1.1rem
+    background: #E0EDFF
+    border-radius: 10px
+  @media screen and(max-width:430px)
+
+
+    &:before
+      content: ""
+      position: absolute
+      top: 50%
+      left: -30px
+      margin-top: -15px
+      border: 15px solid transparent
+      border-right: 15px solid #E0EDFF
+
+  .balloon1Right
+    position: relative
+    display: inline-block
+    margin: 1.5em 15px 1.5em 0px
+    padding: 7px 10px
+    min-width: 120px
+    max-width: 70%
+    color: #555
+    font-size: 1.1rem
+    background: #C1FFAC
+    border-radius: 10px
+
+    &:before
+      content: ""
+      position: absolute
+      top: 50%
+      right: -30px
+      margin-top: -15px
+      border: 15px solid transparent
+      border-left: 15px solid #C1FFAC
+
+  .balloon1Left3
+    position: relative
+    display: inline-block
+    margin: 1.5em 0 1.5em 15px
+    padding: 7px 10px
+    min-width: 120px
+    max-width: 70%
+    color: #555
+    font-size: 1.1rem
+    background: #FFBFDF
+    border-radius: 10px
+
+    &:before
+      content: ""
+      position: absolute
+      top: 50%
+      left: -30px
+      margin-top: -15px
+      border: 15px solid transparent
+      border-right: 15px solid #FFBFDF
+
+  p
+    margin: 0
+    padding: 0

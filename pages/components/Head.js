@@ -1,6 +1,5 @@
-import Document from "../_document";
-import Head from "next/head";
-import * as React from "react";
+import Head from 'next/head'
+import * as React from 'react'
 const IndexHead = () => {
   return (
     <Head>
@@ -22,6 +21,6 @@ const IndexHead = () => {
       <meta charSet="utf-8" />
       <title>ポートフォリオ</title>
     </Head>
-  );
-};
-export default IndexHead;
+  )
+}
+export default IndexHead
