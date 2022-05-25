@@ -29,6 +29,7 @@ const Navi =()=>{
 }
 export default Navi
 const Sdiv = styled.div`
+    max-width: 960px;
     margin-top: 20px;
     padding: 10px;
     display: flex;
@@ -48,7 +49,7 @@ const Sdiv = styled.div`
         background: linear-gradient(127deg,#e6d4c5, #c1b8e5);
         border-radius: 25px 10px/ 10px 25px;
         transition: .3s;
-        transform: rotateZ(180deg) translateX(-45vw) scale(0);
+        transform: scale(0);
 
         &.get{
             transform: rotate(0deg) translateX(0) scale(1);

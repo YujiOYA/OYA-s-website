@@ -31,12 +31,14 @@ const SDiv = styled.section`
         position: absolute;
         width: 30px;
         height: 6px;
-        background: rgba(255,0,0,0.5);
+        background: #c98d4d;
         transition: 0.3s;
         &:first-of-type{
+            border-radius: 2px 2px 0 0/4px 4px 0 0;
             top: 0px;
             transform: rotate(0deg);
             &.get{
+                border-radius: 0;
                 transform: rotate(45deg) ;
                 top: 8px;
                 height: 4px;
@@ -44,14 +46,21 @@ const SDiv = styled.section`
             }
         }
         &:nth-of-type(2){
+            width: 32px;
+            background: #5f3322;
+            box-sizing: border-box;
+            border-radius: 2px;
             top: 8px;
+            height: 8px;
+            right: -1px;
+            border-top: 2px solid #ffd323;
             &.get{
                 transform: scale(0);
             }
         }
-        &:nth-of-type(3){
+        &:last-of-type{
             transform: rotate(0deg);
-            top: 16px;
+            top: 18px;
             &.get{
                 transform: rotate(-45deg);
                 top: 8px;
