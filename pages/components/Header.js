@@ -22,8 +22,8 @@ const Header = () => {
       <p align="right" className="smalltext">
         〈対応時間〉10:00〜20:30(土日祝)
       </p>
-    </header>
     <Navi />
+    </header>
     </>
   )
 }

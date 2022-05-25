@@ -30,6 +30,8 @@ const Navi =()=>{
 export default Navi
 const Sdiv = styled.div`
     max-width: 960px;
+    width: 100vw;
+    margin: 0px auto;
     margin-top: 20px;
     padding: 10px;
     display: flex;
