@@ -1,10 +1,11 @@
 import styled from "styled-components"
 
-export default const Button = (props)=>{
+const Button = (props)=>{
     return(
         <SButton type='button' onClick={props.onClick}>{props.children}</SButton>
     )
 }
+export default Button
 const SButton= styled.button`
     width: 100px;
     text-align: center;

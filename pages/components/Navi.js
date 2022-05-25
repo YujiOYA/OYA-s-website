@@ -4,7 +4,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import Hamburger from "./humberger";
 
-export default const Navi =()=>{
+const Navi =()=>{
     const route = useRouter();
     const path = route.asPath
     const [first, setfirst]= useState(false)
@@ -27,7 +27,7 @@ export default const Navi =()=>{
 
     )
 }
-
+export default Navi
 const Sdiv = styled.div`
     margin-top: 20px;
     padding: 10px;
