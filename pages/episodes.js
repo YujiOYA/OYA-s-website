@@ -4,7 +4,7 @@ import { useState } from "react";
 import { url } from "../utils/config";
 import Header from "./components/Header";
 import styles from "./css/baloons.module.sass";
-import { BackButton } from "./components/BackButton";
+import BackButton from "./components/BackButton";
 
 const Episodes =()=>{
     const[rb , setT] = useState(false);

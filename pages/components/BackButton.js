@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { Button } from "./button";
+import Button from "./button";
 
 const BackButton=()=>{
     const router = useRouter();

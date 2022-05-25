@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Navi } from "./Navi"
+import Navi from "./Navi"
 const Header = () => {
   return (
     <>

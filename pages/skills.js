@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
-import {BackButton} from './components/BackButton'
+import BackButton from './components/BackButton'
 import Header from './components/Header'
 
 const Skills= ()=>{
