@@ -50,7 +50,7 @@ const SUl = styled.ul`
     background: #fff;
     border-radius: 30px;
     margin: 0px auto;
-    width: 100%;
+    width: 85%;
     max-width: 960px;
 
     li{

@@ -3,7 +3,7 @@ import MediaQuery from 'react-responsive'
 
 const Hamburger =(props)=>{
     return(
-        <MediaQuery maxWidth={400}>
+        <MediaQuery maxWidth={440}>
         <SDiv onClick={props.onClick}>
             <p className={props.type ? 'get' : ''}></p>
             <p className={props.type ? 'get' : ''}></p>

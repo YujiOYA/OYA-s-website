@@ -40,7 +40,7 @@ const Sdiv = styled.div`
     position: relative;
     box-sizing: border-box;
 
-    @media screen and (max-width:400px){
+    @media screen and (max-width:440px){
         display: block;
         width: 45vw;
         position: fixed;
@@ -64,7 +64,7 @@ const Sdiv = styled.div`
         display: inline;
         transition: .3s;
     }
-    @media screen and (max-width:400px){
+    @media screen and (max-width:440px){
         a{
             display: flex;
             flex-direction: column;
