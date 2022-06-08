@@ -1,5 +1,7 @@
 import { ParsedUrlQuery } from 'querystring';
-import { blocks, post, posts } from "./contents"
+import blocks from "./posts"
+import post from "./post"
+import posts from "./blocks"
 import { NextPage,GetStaticProps,GetStaticPaths  } from "next"
 import Image from 'next/image';
 import Head from 'next/head';
@@ -17,42 +19,41 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
     // Get the dynamic id
     let page_result = await post(id); 
     // Fetch the post
-    let { results } = await blocks(id); 
+    // let { results } = await blocks(id); 
     // Get the children
     return {
       props: {
         id,
         post: page_result,
-        blocks: results
+        // blocks: results
       }
     }
  }
- export const getStaticPaths: GetStaticPaths = async () => {
-    let { results } = await posts(); 
-    // Get all posts
-    return {
-      paths: results.map((post) => { 
-        // Go through every post
-        return {
-          params: { 
-            // set a params object with an id in it
-            id: post.id
-          }
-        }
-      }),
-      fallback: false
-    }
- } 
+//  export const getStaticPaths: GetStaticPaths = async () => {
+//     let { results } = await posts(); 
+//     // Get all posts
+//     return {
+//       paths: results.map((post) => { 
+//         // Go through every post
+//         return {
+//           params: { 
+//             // set a params object with an id in it
+//             id: post.id
+//           }
+//         }
+//       }),
+//       fallback: false
+//     }
+//  } 
  interface Props {
     id: string,
     post: any,
     blocks: [any]
  }
-export const Posts = posts()
+
 
 
  const Post:NextPage<Props> = ({id,post,blocks}) => {
-     console.log(Posts);
      
      const notionImgPath = post.properties.画像.files[0].file.url
 

@@ -1,4 +1,4 @@
-import {posts}  from "./contents";
+import posts  from "./posts";
 import Link from 'next/link';
 import Head from "next/head";
 import { NextPage, GetServerSideProps } from "next";
