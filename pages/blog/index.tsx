@@ -60,13 +60,14 @@ const Home: NextPage<Props> = (props) => {
       <Header />
       <SDiv >
       <Head>
-        <title>Latest posts</title>
+        <title>おやつブログ</title>
       </Head>
 
       <main >
         <h1 >
-        Latest posts
+        おやつブログ
         </h1>
+        <h4 style={{color:'gray', paddingBottom:'16px', textDecoration:'underLine', textDecorationColor:"#eee" }}>このブログはNotionで管理し、NotionApiを使って出力しています。</h4>
         {
           props.posts.map((result:any,index: Key) => {
             if(typeof result.properties.タイトル.title[0].plain_text !== "undefined"){
@@ -75,9 +76,9 @@ const Home: NextPage<Props> = (props) => {
               <ul>
                 <SLi>
             <Link href={`/blog/${result.id}`} >
-              <p>タイトル：
-                {result.properties.タイトル.title[0].plain_text }
-              </p>
+              <span style={{fontSize:"1.4rem",textDecoration:"underLine"}}>
+                ○{result.properties.タイトル.title[0].plain_text }
+              </span>
             </Link>
             </SLi>
 

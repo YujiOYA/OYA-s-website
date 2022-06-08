@@ -8,10 +8,11 @@ background: #ddd;
 width: 90%;
 height: 70vh;
 border-radius: 16px;
-justify-content: center;
-align-items: center;
+justify-content: space-around;
+align-items: stretch;
 flex-direction: column;
 margin: 0px auto;
+padding: 16px;
 `
 
 export default SDiv
