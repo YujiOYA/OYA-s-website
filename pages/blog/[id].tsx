@@ -6,6 +6,8 @@ import { NextPage,GetStaticProps,GetStaticPaths  } from "next"
 import Image from 'next/image';
 import Head from 'next/head';
 import SDiv from './layout';
+import { useRouter } from "next/router";
+import Button from '../components/button';
 
 import Header from '../components/Header'
 interface IParams extends ParsedUrlQuery {
@@ -52,9 +54,12 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
 
  const Post:NextPage<Props> = ({id,post,blocks}) => {
-   console.log(post.properties.path.rich_text[0].plain_text)
+
+  const router = useRouter();
      
-     const notionImgPath = `/images/${post.properties.path.rich_text[0].plain_text}`
+     const notionImgPath = post.properties.path.rich_text[0].plain_text
+
+     
     return (
       <>
       <Header />
@@ -71,9 +76,10 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
             post.properties.記事.rich_text[0].plain_text
           }
         </div>
-        <Image src={notionImgPath} alt='blog pic' height="400px"  width="600px" objectFit='contain' />
+        <Image src={`/images/${notionImgPath}`} alt='blog pic' height="400px"  width="600px" objectFit='contain' />
 
       </SDiv>
+      <Button onClick={()=>{router.back()}}>戻る</Button>
       </>
     )
  }
