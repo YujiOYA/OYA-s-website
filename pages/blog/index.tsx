@@ -5,7 +5,7 @@ import { NextPage, GetServerSideProps, GetStaticProps } from "next";
 import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal, Key } from "react";
 import styled from "styled-components";
 import Header from "../components/Header"
-import SDiv from "./layout"
+
 import BackButton from '../components/BackButton'
 
 export const getStaticProps:GetStaticProps =async ()=> {
@@ -58,16 +58,20 @@ const Home: NextPage<Props> = (props) => {
     
     return (
       <>
-      <Header />
-      <SDiv >
       <Head>
         <title>おやつブログ</title>
       </Head>
+      <Header />
 
       <main >
-        <h1 >
-        おやつブログ
-        </h1>
+      <div id="p-0" className="content_group">
+          <p className="sub_title">
+            おやつブログ
+          </p>
+          <div className="d-flex df-cntr-sp playbox">
+            <div className="content">
+              <div className="c_text">
+
         <h4 style={{color:'gray', paddingBottom:'16px', textDecoration:'underLine', textDecorationColor:"#eee" }}>このブログはNotionで管理し、NotionApiを使って出力しています。</h4>
         {
           props.posts.map((result:any,index: Key) => {
@@ -89,10 +93,12 @@ const Home: NextPage<Props> = (props) => {
           }
           })
         }
+        </div>
+        </div>
+        </div>
+        </div>
       </main>
  
-
-      </SDiv>
       <BackButton />
 
     </>
