@@ -41,7 +41,7 @@ const App = () => {
 const SFooter =styled.footer`
   position: fixed;
   bottom: 0px;
-  background: #fff;
+  background: #5db3a0aa;
   text-align: center;
   width: 100vw;
 `
