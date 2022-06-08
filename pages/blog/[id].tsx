@@ -52,9 +52,9 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
 
  const Post:NextPage<Props> = ({id,post,blocks}) => {
+   console.log(post.properties.path.rich_text[0].plain_text)
      
-     const notionImgPath = post.properties.画像.files[0].file.url
-
+     const notionImgPath = `/images/${post.properties.path.rich_text[0].plain_text}`
     return (
       <>
       <Header />
