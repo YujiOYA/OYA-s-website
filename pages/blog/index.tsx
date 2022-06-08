@@ -1,13 +1,13 @@
 import posts  from "../../src/posts";
 import Link from 'next/link';
 import Head from "next/head";
-import { NextPage, GetServerSideProps } from "next";
+import { NextPage, GetServerSideProps, GetStaticProps } from "next";
 import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal, Key } from "react";
 import styled from "styled-components";
 import Header from "../components/Header"
 import SDiv from "./layout"
 
-export const getServerSideProps:GetServerSideProps =async ()=> {
+export const getStaticProps:GetStaticProps =async ()=> {
     // Get the posts
     let { results } = await posts();
     // Return the result
