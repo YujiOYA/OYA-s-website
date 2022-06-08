@@ -1,12 +1,10 @@
 import { ParsedUrlQuery } from 'querystring';
-import blocks from "./posts"
+import blocks from "./blocks"
 import post from "./post"
-import posts from "./blocks"
+import posts from "./posts"
 import { NextPage,GetStaticProps,GetStaticPaths  } from "next"
 import Image from 'next/image';
 import Head from 'next/head';
-import Link from 'next/link';
-import styled from 'styled-components'
 import SDiv from './layout';
 
 import Header from '../components/Header'
@@ -19,32 +17,32 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
     // Get the dynamic id
     let page_result = await post(id); 
     // Fetch the post
-    // let { results } = await blocks(id); 
+    let { results } = await blocks(id); 
     // Get the children
     return {
       props: {
         id,
         post: page_result,
-        // blocks: results
+        blocks: results
       }
     }
  }
-//  export const getStaticPaths: GetStaticPaths = async () => {
-//     let { results } = await posts(); 
-//     // Get all posts
-//     return {
-//       paths: results.map((post) => { 
-//         // Go through every post
-//         return {
-//           params: { 
-//             // set a params object with an id in it
-//             id: post.id
-//           }
-//         }
-//       }),
-//       fallback: false
-//     }
-//  } 
+ export const getStaticPaths: GetStaticPaths = async () => {
+    let { results } = await posts(); 
+    // Get all posts
+    return {
+      paths: results.map((post) => { 
+        // Go through every post
+        return {
+          params: { 
+            // set a params object with an id in it
+            id: post.id
+          }
+        }
+      }),
+      fallback: false
+    }
+ } 
  interface Props {
     id: string,
     post: any,
