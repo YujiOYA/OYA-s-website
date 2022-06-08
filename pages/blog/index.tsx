@@ -6,6 +6,7 @@ import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal, Key } 
 import styled from "styled-components";
 import Header from "../components/Header"
 import SDiv from "./layout"
+import BackButton from '../components/BackButton'
 
 export const getStaticProps:GetStaticProps =async ()=> {
     // Get the posts
@@ -92,6 +93,7 @@ const Home: NextPage<Props> = (props) => {
  
 
       </SDiv>
+      <BackButton />
 
     </>
     )
