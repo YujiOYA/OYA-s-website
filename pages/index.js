@@ -1,8 +1,8 @@
 import IndexHead from "./components/Head";
-import React, {useState, useEffect } from "react";
 import Car from "./components/slick";
 import Header from "./components/Header";
 import styled from 'styled-components'
+import { ChakraProvider } from "@chakra-ui/react";
 
 const App = () => {
 

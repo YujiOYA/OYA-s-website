@@ -6,6 +6,7 @@ const Button = (props)=>{
     )
 }
 export default Button
+
 const SButton= styled.button`
     width: 100px;
     text-align: center;

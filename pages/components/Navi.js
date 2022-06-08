@@ -19,6 +19,7 @@ const Navi =()=>{
         <Sdiv className={first ? "get" : ""}>
             <Link href='/' ><a className={path=='/' ? "ison":''}>Home</a></Link>
             <Link href='/about/' ><a className={path=='/about/' ?'ison':''}>About OYA</a></Link>
+            <Link href='/blog/' ><a className={path=='/blog/' ?'ison':''}>Blog</a></Link>
             <Link href='/skills/' ><a className={path=='/skills/' ?'ison':''}>Skills</a></Link>
             <Link href='/episodes/' ><a className={path=='/episodes/'?'ison':''}>Episodes</a></Link>
             <Link href='/qa/' ><a className={path=='/qa/'?'ison':''}>Q&A</a></Link>
