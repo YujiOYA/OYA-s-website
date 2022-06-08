@@ -1,7 +1,7 @@
 import { ParsedUrlQuery } from 'querystring';
-import blocks from "./blocks"
-import post from "./post"
-import posts from "./posts"
+import blocks from "../../src/blocks"
+import post from "../../src/post"
+import posts from "../../src/posts"
 import { NextPage,GetStaticProps,GetStaticPaths  } from "next"
 import Image from 'next/image';
 import Head from 'next/head';

@@ -1,4 +1,4 @@
-import {notion} from "./contents"
+import notion from "./contents"
 
 
 export default async function posts() {
