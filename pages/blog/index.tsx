@@ -75,7 +75,7 @@ const Home: NextPage<Props> = (props) => {
         <h4 style={{color:'gray', paddingBottom:'16px', textDecoration:'underLine', textDecorationColor:"#eee" }}>このブログはNotionで管理し、NotionApiを使って出力しています。</h4>
         {
           props.posts.map((result:any,index: Key) => {
-            if(typeof result.properties.タイトル.title[0].plain_text !== "undefined"){
+
           return (
             <div  key={index}>
               <ul>
@@ -90,7 +90,7 @@ const Home: NextPage<Props> = (props) => {
             </ul>
             </div>
             )
-          }
+
           })
         }
         </div>

@@ -73,7 +73,7 @@
 }
 
 .slick-prev {
-  left: -25px;
+  left: 0px;
 }
 [dir="rtl"] .slick-prev {
   right: -25px;
@@ -87,7 +87,7 @@
 }
 
 .slick-next {
-  right: -25px;
+  right: 0px;
 }
 [dir="rtl"] .slick-next {
   right: auto;
@@ -193,12 +193,12 @@
 }
 .slider .slick-arrow_prev {
   left: 10px;
-  color: #fff;
+  color: #111;
   font-weight: 900;
 }
 .slider .slick-arrow_next {
   right: 0px;
-  color: #fff;
+  color: #111;
   font-weight: 900;
 }
 

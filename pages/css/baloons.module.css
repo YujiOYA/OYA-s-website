@@ -1,87 +1,89 @@
-.baloon-group {
+.baloonGroup {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
   width: 100%;
   height: auto;
 }
 
-.baloon-group .balloon1-left {
+.baloonGroup .balloon1Left {
   position: relative;
   display: inline-block;
   margin: 1.5em 0 1.5em 15px;
   padding: 7px 10px;
   min-width: 120px;
-  max-width: 80%;
+  max-width: 70%;
   color: #555;
-  font-size: 1.3rem;
-  background: #e0edff;
+  font-size: 1.1rem;
+  background: #E0EDFF;
   border-radius: 10px;
 }
 
-.baloon-group .balloon1-left:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: -30px;
-  margin-top: -15px;
-  border: 15px solid transparent;
-  border-right: 15px solid #e0edff;
+@media screen and (max-width: 430px) {
+  .baloonGroup:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    margin-top: -15px;
+    border: 15px solid transparent;
+    border-right: 15px solid #E0EDFF;
+  }
 }
 
-.baloon-group .balloon1-right {
+.baloonGroup .balloon1Right {
   position: relative;
   display: inline-block;
   margin: 1.5em 15px 1.5em 0px;
   padding: 7px 10px;
   min-width: 120px;
-  max-width: 80%;
+  max-width: 70%;
   color: #555;
-  font-size: 1.3rem;
-  background: #c1ffac;
+  font-size: 1.1rem;
+  background: #C1FFAC;
   border-radius: 10px;
 }
 
-.baloon-group .balloon1-right:before {
+.baloonGroup .balloon1Right:before {
   content: "";
   position: absolute;
   top: 50%;
   right: -30px;
   margin-top: -15px;
   border: 15px solid transparent;
-  border-left: 15px solid #c1ffac;
+  border-left: 15px solid #C1FFAC;
 }
 
-.baloon-group .balloon1-left3 {
+.baloonGroup .balloon1Left3 {
   position: relative;
   display: inline-block;
   margin: 1.5em 0 1.5em 15px;
   padding: 7px 10px;
   min-width: 120px;
-  max-width: 80%;
+  max-width: 70%;
   color: #555;
-  font-size: 1.3rem;
-  background: #ffbfdf;
+  font-size: 1.1rem;
+  background: #FFBFDF;
   border-radius: 10px;
 }
 
-.baloon-group .balloon1-left3:before {
+.baloonGroup .balloon1Left3:before {
   content: "";
   position: absolute;
   top: 50%;
   left: -30px;
   margin-top: -15px;
   border: 15px solid transparent;
-  border-right: 15px solid #ffbfdf;
+  border-right: 15px solid #FFBFDF;
 }
 
-.baloon-group p {
+.baloonGroup p {
   margin: 0;
   padding: 0;
 }
-/*# sourceMappingURL=baloons.css.map */
+/*# sourceMappingURL=baloons.module.css.map */

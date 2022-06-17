@@ -2,7 +2,6 @@ import IndexHead from "./components/Head";
 import Car from "./components/slick";
 import Header from "./components/Header";
 import styled from 'styled-components'
-import { ChakraProvider } from "@chakra-ui/react";
 
 const App = () => {
 
@@ -13,12 +12,8 @@ const App = () => {
         <a href="./index.html"></a>
         <Header />
         <section className="eye-catch">
-          <h1 className="message" style={{margin:'12px 4px'}}>ポートフォリオ </h1>
-          <div className="catch_h3">
-            <div className="content_group" style={{ marginTop: 15 + "px" }}>
+         
               <Car></Car>
-            </div>
-          </div>
         </section>
 
       
