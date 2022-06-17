@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 
 
-export const theme = ()=>{
+const theme = ()=>{
     extendTheme({
 
   styles: {
@@ -18,4 +18,6 @@ export const theme = ()=>{
   }
 }})
 };
+
+export default theme
 
