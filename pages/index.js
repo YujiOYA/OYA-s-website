@@ -8,7 +8,7 @@ const App = () => {
 
   return (
     <>
-      <IndexHead></IndexHead>
+      <IndexHead title='ポートフォリオ'></IndexHead>
         <a href="./index.html"></a>
         <Header />
         <section className="eye-catch">

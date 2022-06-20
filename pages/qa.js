@@ -1,6 +1,7 @@
 import { useState } from "react";
 import BackButton from "./components/BackButton";
 import Header from "./components/Header";
+import IndexHead from "./components/Head";
 
 
 
@@ -17,6 +18,7 @@ const Qa = ()=>{
 
     return(
         <>
+        <IndexHead title='Q&A'></IndexHead>
         <Header />
         <div id="p-3" className="content_group">
           <p className="sub_title">〜よくあるご質問〜</p>

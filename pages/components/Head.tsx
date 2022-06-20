@@ -1,6 +1,11 @@
 import Head from 'next/head'
 import * as React from 'react'
-const IndexHead = () => {
+
+type Props={
+  title: string,
+}
+
+const IndexHead = (props:Props) => {
   return (
     <Head>
       <meta httpEquiv="Content-Type" content="text/html; charSet=utf-8" />
@@ -19,7 +24,7 @@ const IndexHead = () => {
       <meta httpEquiv="imagetoolbar" content="no" />
 
       <meta charSet="utf-8" />
-      <title>ポートフォリオ</title>
+      <title>{props.title}</title>
     </Head>
   )
 }

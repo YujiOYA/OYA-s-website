@@ -1,9 +1,11 @@
 import Header from "./components/Header";
 import BackButton from "./components/BackButton";
+import IndexHead from "./components/Head";
 
 const About = ()=>{
 return (
     <>
+        <IndexHead title='OYAとは'></IndexHead>
         <Header />
 
         <div id="p-0" className="content_group">

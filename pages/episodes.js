@@ -5,16 +5,19 @@ import { url } from "../utils/config";
 import Header from "./components/Header";
 import styles from "./css/baloons.module.sass";
 import BackButton from "./components/BackButton";
+import IndexHead from "./components/Head"
+import { ReactEventHandler } from "react";
 
 const Episodes =()=>{
     const[rb , setT] = useState(false);
-    const setrb = useEffect(() => {
+    const setrb = useEffect(()=> {
       setInterval(() => {
         setT((rb) => !rb);
       }, 1500);
-    }, []);
+    }, [])
     return(
         <>
+        <IndexHead title='エピソード'></IndexHead>
         <Header />
         <div id="p-2" className='content_group'>
         <p className='sub_title'>
@@ -65,7 +68,7 @@ const Episodes =()=>{
                       <p
                         onLoad={setrb}
                         className={`inner ${rb ? "ispressed" : ""}`}
-                        style={{paddingBottom:'8px',textDecoration:'none', height:'80px', boxSizing:'borderBox'}}
+                        style={{margin:'8px 16px', paddingBottom:'8px',textDecoration:'none', height:'80px', boxSizing:'borderBox'}}
                       >
                         <span style={{fontSize:'1.0rem'}}>
                           学習中のアプリはこちら

@@ -1,12 +1,15 @@
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
 import BackButton from './components/BackButton'
+import IndexHead from './components/Head'
 import Header from './components/Header'
+
 
 const Skills= ()=>{
     const router = useRouter()
     return(
         <>
+        <IndexHead title='スキル一覧'></IndexHead>
         <Header />
         <div id="p-2" className='content_group'>
         <p className='sub_title'>
