@@ -13,10 +13,6 @@ const IndexHead = (props:Props) => {
         name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=yes"
       />
-      <meta
-        name="google-site-verification"
-        content="KTSMI-8S62r4HmDSZRYqGwkozOyNOrCX4debPWo0dIQ"
-      />
 
       <meta name="author" content="OYA" />
       <meta name="Description" content="OYAのポートフォリオ" />
