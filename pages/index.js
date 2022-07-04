@@ -2,17 +2,15 @@ import IndexHead from "./components/Head";
 import Car from "./components/slick";
 import Header from "./components/Header";
 import styled from 'styled-components'
-
+import Link from "next/link"
 const App = () => {
 
 
   return (
     <>
       <IndexHead title='ポートフォリオ'></IndexHead>
-        <a href="./index.html"></a>
         <Header />
         <section className="eye-catch">
-         
               <Car></Car>
         </section>
 
@@ -23,9 +21,12 @@ const App = () => {
 
           <SFooter>
             <div className="f-flex">
-              <a href="./index.html">
+
+            <Link href='/' >
+              <a>
                 <div className="cop">&copy; 2022 OYA</div>
               </a>
+            </Link>
             </div>
           </SFooter>
 
