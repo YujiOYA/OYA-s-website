@@ -10,7 +10,7 @@ import { ReactEventHandler } from "react";
 
 const Episodes =()=>{
     const[rb , setT] = useState(false);
-    const setrb = useEffect(()=> {
+    const setrb= useEffect(()=> {
       setInterval(() => {
         setT((rb) => !rb);
       }, 1500);
@@ -60,17 +60,17 @@ const Episodes =()=>{
                   height={100}
                 />
                 <div className={styles.balloon1Left3}>
-                  <p>
+                  <p style={{marginBottom:'12px'}}>
                     彼は広報活動のwebサイト修正から始まり、webプログラミングに関心を持っています。WEBアンケートやPHPでチラシPDFを作成するプログラムや、最近ではLaravelで日記アプリを作ったりしています。
                   </p>
                   <div className="repeat-button" style={{margin: '8px'}}>
                     <a style={{textDecoration:'none'}} href="https://oyasdiary.ga">
                       <p
-                        onLoad={setrb}
+                        onLoad={()=>setrb}
                         className={`inner ${rb ? "ispressed" : ""}`}
-                        style={{margin:'8px 16px', paddingBottom:'8px',textDecoration:'none', height:'80px', boxSizing:'borderBox'}}
+                        style={{margin:'8px 16px', paddingBottom:'8px',textDecoration:'none', height:'80px'}}
                       >
-                        <span style={{fontSize:'1.0rem'}}>
+                        <span style={{fontSize:'1.0rem',margin:'4px'}}>
                           学習中のアプリはこちら
                           </span>
                       </p>

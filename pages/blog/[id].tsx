@@ -8,8 +8,9 @@ import Head from 'next/head';
 import SDiv from './layout';
 import { useRouter } from "next/router";
 import Button from '../components/button';
+import Header from '../components/Header';
 
-import Header from '../components/Header'
+
 interface IParams extends ParsedUrlQuery {
     id: string
  }
@@ -17,7 +18,10 @@ interface IParams extends ParsedUrlQuery {
 export const getStaticProps: GetStaticProps = async (ctx) => {
     let { id } = ctx.params as IParams; 
     // Get the dynamic id
-    let page_result = await post(id); 
+    let page_result = await post(id);
+
+    
+    
     // Fetch the post
     let { results } = await blocks(id); 
     // Get the children
@@ -29,6 +33,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
       }
     }
  }
+
  export const getStaticPaths: GetStaticPaths = async () => {
     let { results } = await posts(); 
     // Get all posts
@@ -52,12 +57,11 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
  }
 
 
-
  const Post:NextPage<Props> = ({id,post,blocks}) => {
 
   const router = useRouter();
   const notionImgPath = post.properties.path.rich_text[0]?.plain_text
-
+  
      
     return (
       <>
@@ -70,11 +74,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
           </title> }
         </Head>
         <h1>{post.properties.タイトル.title[0].plain_text}</h1>
-        <div>
-          {
-            post.properties.記事.rich_text[0].plain_text
-          }
-        </div>
+        <div></div>
         
 
         {typeof notionImgPath !== "undefined" 
