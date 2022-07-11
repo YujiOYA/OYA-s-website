@@ -74,7 +74,9 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
           </title> }
         </Head>
         <h1>{post.properties.タイトル.title[0].plain_text}</h1>
-        <div></div>
+        <p>
+        {post.properties.記事.rich_text[0]?.plain_text}
+        </p>
         
 
         {typeof notionImgPath !== "undefined" 
