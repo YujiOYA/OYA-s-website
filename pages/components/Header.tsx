@@ -16,10 +16,10 @@ const Header = () => {
           <br />
         </div>
       </div>
-      <p align="right" className="smalltext">
+      <p style={{textAlign:"right"}} className="smalltext">
         〈対応時間〉10:00〜20:30(平日)
       </p>
-      <p align="right" className="smalltext">
+      <p style={{textAlign:"right"}} className="smalltext">
         〈対応時間〉10:00〜20:30(土日祝)
       </p>
     <Navi />
