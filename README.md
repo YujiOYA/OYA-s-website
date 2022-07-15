@@ -14,4 +14,4 @@ BlogページはNotionで管理しているものをNotionAPI経由のJAMstack[^
 ## これから実装したいもの
 ダークモード
 
-microｃｍｓによるコンテンツ管理
+microcmsによるコンテンツ管理
