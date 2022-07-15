@@ -9,6 +9,7 @@ import SDiv from './layout';
 import { useRouter } from "next/router";
 import Button from '../components/button';
 import Header from '../components/Header';
+import { Text } from '@chakra-ui/react';
 
 
 interface IParams extends ParsedUrlQuery {
@@ -73,7 +74,9 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
             {post.properties.タイトル.title[0].plain_text}
           </title> }
         </Head>
-        <h1>{post.properties.タイトル.title[0].plain_text}</h1>
+        <Text as='h1' fontWeight={700} fontSize='2rem' color='#f8e' textShadow='2px 2px 2px 2px rgba(0, 0, 0, 1)'>
+          {post.properties.タイトル.title[0].plain_text}
+        </Text>
         <p>
         {post.properties.記事.rich_text[0]?.plain_text}
         </p>

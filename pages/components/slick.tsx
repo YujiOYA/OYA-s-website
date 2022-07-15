@@ -20,7 +20,8 @@ const Car = () => {
   return (
     <>
     <Box w="80%" m="0 auto">
-      <Slider style={{display:"block",width:"none"}} {...settings} >
+      <Box style={{display:"block",width:"none"}} >
+      <Slider {...settings} >
         <Box minHeight="65vh" transition="1s ease-in-out">
           <Center w="auto" minHeight="75vh">
             <h1 className="message" style={{margin:'12px 4px'}}>Welcome</h1>
@@ -61,6 +62,7 @@ const Car = () => {
 
         </Box>
       </Slider>
+      </Box>
       </Box>
     </>
   )
