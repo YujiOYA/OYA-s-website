@@ -11,7 +11,7 @@ function Section(props: { title: string | number | boolean | ReactElement<any, s
         <>  
              <Box as="section" m="3" >
                 <Text fontSize={"2xl"} fontWeight="bold" outline={"1px solid gray.300"} textAlign='center'>{props.title}</Text>
-                <Box background={bg} rounded="2xl" maxW={960} minH='50vh' m="0 auto" transition="1s">
+                <Box background={bg} rounded="2xl" maxW={960} minH='50vh' m="0 auto" transition="1s" p={3}>
                     <Text color={color}>
                         {props.children}
                     </Text>
