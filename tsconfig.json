@@ -15,6 +15,18 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/_document.js", "pages/components/Head.tsx", "pages/components/button.js", "pages/components/button.js", "pages/components/slick.js", "pages/components/slick.js", "pages/components/slick.js", "pages/episodes.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/_document.js",
+    "pages/components/Head.tsx",
+    "pages/components/button.js",
+    "pages/components/button.js",
+    "pages/components/slick.js",
+    "pages/components/slick.js",
+    "pages/components/slick.js",
+    "pages/episodes.js"
+  ],
   "exclude": ["node_modules"]
 }

@@ -3,3 +3,9 @@
 /out
 /.next
 
+pages/css/baloons.module.css
+pages/css/carousel.css
+pages/css/mystyle.css
+pages/css/mystyle.sass
+pages/css/slick-theme.css
+pages/css/slick.css

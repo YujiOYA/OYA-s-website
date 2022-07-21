@@ -1,4 +1,4 @@
-const urlPrefix = process.env.GITHUB_ACTIONS ? "/github.io" : "";
+const urlPrefix = process.env.GITHUB_ACTIONS ? '/github.io' : ''
 
 module.exports = {
   // ...
@@ -12,4 +12,4 @@ module.exports = {
   images: {
     domains: ['s3.us-west-2.amazonaws.com'],
   },
-};
+}
