@@ -29,6 +29,53 @@ interface IParams extends ParsedUrlQuery {
   id: string
 }
 
+type Title = {
+  text: {
+    content: String
+  }
+}
+
+interface Result {
+  object: String,
+  id: String,
+  created_time: String,
+  last_edited_time: String,
+  created_by: {
+    object: String,
+    id: String
+  },
+  last_edited_by: {
+    object: String,
+    id: String
+  },
+  cover: null,
+  icon: null,
+  parent: {
+    type: String,
+    database_id: String
+  },
+  archived: Boolean,
+  properties: {
+    '記事': [Object],
+    '公開': [Object],
+    path: [Object],
+    '画像': [Object],
+    '作成日': {
+      date: {
+        start: String
+      }
+    },
+    'タイトル': {
+      title: Array<Title>
+    },
+    url: String
+  }
+}
+
+interface Posts {
+  Array(any)
+}
+
 export const getStaticProps: GetStaticProps = async (ctx) => {
   let { id } = ctx.params as IParams
   // Get the dynamic id
@@ -68,38 +115,48 @@ interface Props {
   post: any
   posts: [any]
 }
-type MonthArr={
-  group:{
-    month:String
-    content:[]
-} 
+
 const Post: NextPage<Props> = ({ id, post, posts }) => {
   const router = useRouter()
   const notionImgPath = post.properties.path.rich_text[0]?.plain_text
   // const [month, setMonth] = useState([]);
   // const getMonth =(str): void => setMonth(str)
   const arr = []
+  const arr2 = []
+  const r = []
+  const r2 = []
+  const ob = {}
+  let a = 0
+  let b = -1
 
-  const resultGroup = posts.map((result: any, i) => {
-    let a:Number = 0
-    let b:Number = 0
-    if(posts[i].properties.作成日.date?.start.substr(0, 7) !== posts[i-1]?.properties.作成日.date?.start.substr(0, 7)){
-     const monthArr:Array<MonthArr>=
-    
-}else{
-  monthArr[a][b]=result
-  b++
+
+
+  for (a; a < posts.length; a++) {
+    arr.push(posts[a].properties.作成日.date?.start.substr(0, 7))
+    arr2.push(posts[a])
+    console.log(arr)
+
+  }
+  console.log(arr)
+  a = 0
+  for (a; a < posts.length; a++) {
+    if (arr[a] !== arr[a - 1]) {
+      b++
+      r2[b] = []
+      r2[b].push(arr2[a])
+      r.push(r2[b])
+    } else {
+      r2[b].push(arr2[a])
     }
-return monthArr })
+    // console.log(r2);
 
-  posts.map((result: any) => {
-    monthArr.push(result.properties.作成日.date?.start.substr(0, 7))
-  })
-  console.log(arr);
+  }
+
 
   return (
     <>
       <Header />
+      {/* {console.log(r2)} */}
 
       <Section title={post.properties.タイトル.title[0].plain_text}>
         <Head>
@@ -127,46 +184,54 @@ return monthArr })
 
 
         <Accordion allowToggle>
-          {posts.map((result: any, index: number) => {
-            { console.log(monthArr[index]) }
+          {r2.map((result: Array<Result>, index: number) => {
             return (
-              <AccordionItem>
+
+              <AccordionItem key={index}>
                 {/* 1 */}
-<>
-                {monthArr[index] !== monthArr[index - 1] &&
-                  (
-                      <h2>
+                <>
+                  {/* {arr[ index] !== arr[index - 1] &&( */}
+                  <h2>
 
-                        <AccordionButton>
-                          <Box flex="1" textAlign="left">
-                            {result.properties.作成日.date?.start.substr(0, 7)}
-                          </Box>
-                          <AccordionIcon />
+                    <AccordionButton>
+                      <Box flex="1" textAlign="left">
+                        {result[index]?.properties.作成日.date.start.slice(0, 7)}
+                      </Box>
 
-                        </AccordionButton>
+                      <AccordionIcon />
 
-                      </h2>
+                    </AccordionButton>
 
+                  </h2>
+                  {/* )} */}
+                  {result.map((res: Result, index: number) => {
+                    return(
+                    <>
+                      <AccordionPanel pb={4} key={index}>
+                        <Box key={index} fontSize="0.9rem" w="150px">
+                          <Link href={`/blog/${res.id}`}>
+                            <Text
+                              cursor={'pointer'}
+                              m={8}
+                              textDecoration="underLine"
+                              _hover={{ color: '#8dd' }}
+                            >
+                              <>
+                                {res.properties.タイトル.title[0]?.text.content}
+                              </>
+                            </Text>
+                          </Link>
+                        </Box>
+                      </AccordionPanel>
+                    </>
+                    )
+                  }
                   )}
-                <AccordionPanel pb={4}>
-                  <Box key={index} fontSize="0.9rem" w="150px">
-                    <Link href={`/blog/${result.id}`}>
-                      <Text
-                        cursor={'pointer'}
-                        m={8}
-                        textDecoration="underLine"
-                        _hover={{ color: '#8dd' }}
-                      >
-                        {result.properties.タイトル.title[0].plain_text}
-
-                      </Text>
-                    </Link>
-                  </Box>
-                </AccordionPanel>
                 </>
               </AccordionItem>
             )
-          })}
+          }
+          )}
         </Accordion>
       </Section>
 
