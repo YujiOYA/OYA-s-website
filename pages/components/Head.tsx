@@ -15,8 +15,8 @@ const IndexHead = (props: Props) => {
       />
 
       <meta name="author" content="OYA" />
-      <meta name="Description" content="OYAのポートフォリオ" />
-      <meta name="Keywords" content="ポートフォリオ,転職活動,ジョブチェンジ" />
+      <meta name="Description" content="OYAのウェブサイト" />
+      <meta name="Keywords" content="ウェブサイト" />
       <meta httpEquiv="imagetoolbar" content="no" />
 
       <meta charSet="utf-8" />

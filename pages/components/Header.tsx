@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Navi from "./Navi"
-import { HStack, Center, IconButton, useColorMode, useColorModeValue, VStack, Box, Text, Flex } from '@chakra-ui/react'
+import { IconButton, useColorMode, useColorModeValue, VStack, Box, Text, Flex } from '@chakra-ui/react'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 
 const Header = () => {
@@ -17,7 +17,7 @@ const Header = () => {
           <Link href="/">
             <a>
               <Text fontSize={{base:"md",sm:"2xl",md:"4xl",}} fontWeight={"extrabold"}>
-                ポートフォリオ
+                OYAのウェブサイト
               </Text>
             </a>
               </Link>
