@@ -15,6 +15,7 @@ import Header from '../components/Header'
 import BackButton from '../components/BackButton'
 import Section from '../components/Section'
 import { Box, Center, Flex, Text, VStack } from '@chakra-ui/react'
+import { rgbToHex } from '@mui/material'
 
 export const getStaticProps: GetStaticProps = async () => {
   // Get the posts
@@ -28,6 +29,7 @@ export const getStaticProps: GetStaticProps = async () => {
 }
 
 interface Props {
+  [x: string]: any
   posts: any
 }
 // interface Props {
@@ -54,13 +56,23 @@ interface Props {
 //         properties: {
 //             タイトル: {id: string, type: string, title?: string},
 //             作成日: {id: string, type: string, date?: null},
-//             公開: {id: string, type: string, checkbox: false},
+//             公開: {id: string, type: string, checkbox: boolean},
 //             記事: {id: string, type: string, rich_text: []},
 //         url: string
 //     }
 //     }}
-
+const arr=[]
 const Home: NextPage<Props> = (props) => {
+  props.posts.sort(function(a: any, b: any) {
+    return (
+      a.properties.作成日.date.start.substr(0,10) < b.properties.作成日.date.start.substr(0,10) ? 1 : -1 
+      )
+  });
+  props.posts.map((r:Props, i:Number)=>{
+    
+    console.log(r.properties.作成日.date.start.substr(0,10));
+    
+  })
   return (
     <>
       <Head>

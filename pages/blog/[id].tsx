@@ -24,6 +24,7 @@ import {
 import Link from 'next/link'
 import styled from 'styled-components'
 import Section from '../components/Section'
+import { wrap } from 'module'
 
 interface IParams extends ParsedUrlQuery {
   id: string
@@ -148,9 +149,13 @@ const Post: NextPage<Props> = ({ id, post, posts }) => {
     } else {
       r2[b].push(arr2[a])
     }
-    // console.log(r2);
+     console.log(r2);
 
   }
+  r2.sort(function(a:any,b:any){
+      return a[0].properties.作成日.date?.start.substr(0, 7) < b[0].properties.作成日.date?.start.substr(0, 7) ? 1 : -1
+    })
+  
 
 
   return (
@@ -195,7 +200,11 @@ const Post: NextPage<Props> = ({ id, post, posts }) => {
 
                     <AccordionButton>
                       <Box flex="1" textAlign="left">
-                        {result[index]?.properties.作成日.date.start.slice(0, 7)}
+                        {result[index]?.properties.作成日.date.start.slice(0, 7)==undefined?
+                        result[0].properties.作成日.date.start.slice(0, 7)
+                        :
+                        result[index]?.properties.作成日.date.start.slice(0, 7)
+                        }
                       </Box>
 
                       <AccordionIcon />
@@ -204,15 +213,15 @@ const Post: NextPage<Props> = ({ id, post, posts }) => {
 
                   </h2>
                   {/* )} */}
+                  <Flex key={index} fontSize="0.9rem" w="95%" wrap="wrap">
                   {result.map((res: Result, index: number) => {
                     return(
                     <>
-                      <AccordionPanel pb={4} key={index}>
-                        <Box key={index} fontSize="0.9rem" w="150px">
+                      <AccordionPanel pb={1} key={index} w="200px">
                           <Link href={`/blog/${res.id}`}>
                             <Text
                               cursor={'pointer'}
-                              m={8}
+                              m={1}
                               textDecoration="underLine"
                               _hover={{ color: '#8dd' }}
                             >
@@ -221,12 +230,12 @@ const Post: NextPage<Props> = ({ id, post, posts }) => {
                               </>
                             </Text>
                           </Link>
-                        </Box>
                       </AccordionPanel>
                     </>
                     )
                   }
                   )}
+                  </Flex>
                 </>
               </AccordionItem>
             )
