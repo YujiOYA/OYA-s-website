@@ -80,10 +80,7 @@ const Home: NextPage<Props> = (props) => {
       </Head>
       <Header />
 
-      <Section title="おやつブログ">
-                <Center as='h4'>
-                  このブログはNotionで管理し、NotionApiを使って出力しています。
-                </Center>
+      <Section title="日記">
                     <Flex p="1" direction={"column"} align="center" justify='center'>
                 {props.posts.map((result: any, index: Key) => {
                   return (

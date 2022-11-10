@@ -134,7 +134,13 @@ const Post: NextPage<Props> = ({ id, post, posts }) => {
 
   for (a; a < posts.length; a++) {
     arr.push(posts[a].properties.作成日.date?.start.substr(0, 7))
+    arr.sort(function(a:any, b :any){
+      return a < b ? 1 : -1
+    })
     arr2.push(posts[a])
+    arr2.sort(function(a:any, b :any){
+      return a.properties.作成日.date?.start.substr(0, 7) < b.properties.作成日.date?.start.substr(0, 7) ? 1 : -1
+    })
     console.log(arr)
 
   }
